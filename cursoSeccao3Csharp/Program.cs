@@ -7,21 +7,24 @@ namespace cursoSeccao3Csharp
     {
         static void Main(string[] args)
         {
-            double aX, bX, cX, aY, bY, cY;
+            Triangulo X, Y;
             double areaX, areaY, p;
 
-            aX = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            bX = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            cX = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            aY = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            bY = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            cY = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            X = new Triangulo();
+            Y = new Triangulo();
 
-            p = (aX + bX + cX) / 2.0;
-            areaX = Math.Sqrt(p * (p - aX) * (p - bX) * (p - cX));
+            X.a = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            X.b = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            X.c = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Y.a= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Y.b = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Y.c = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            p = (aY + bY + cY) / 2.0;
-            areaY = Math.Sqrt(p * (p - aY) * (p - bY) * (p - cY));
+            p = (X.a + X.b + X.c) / 2.0;
+            areaX = Math.Sqrt(p * (p - X.a) * (p - X.b) * (p - X.c));
+
+            p = (Y.a + Y.b + Y.c) / 2.0;
+            areaY = Math.Sqrt(p * (p - Y.a) * (p - Y.b) * (p - Y.c));
 
             Console.WriteLine("AREA DO TRINGULO X: " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("AREA DO TRINGULO Y: " + areaY.ToString("F4", CultureInfo.InvariantCulture));
@@ -38,8 +41,6 @@ namespace cursoSeccao3Csharp
             {
                 Console.WriteLine("AREAS IGUAIS");
             }
-            Console.ReadLine();
-
             Console.ReadLine();
         }
     }
