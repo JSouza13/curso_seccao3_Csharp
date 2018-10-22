@@ -39,6 +39,8 @@ namespace cursoSeccao3Csharp
                 Console.WriteLine("AREAS IGUAIS");
             }
             Console.ReadLine();
+
+            Console.ReadLine();
         }
     }
 }
