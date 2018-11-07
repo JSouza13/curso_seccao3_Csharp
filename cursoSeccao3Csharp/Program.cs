@@ -8,26 +8,16 @@ namespace cursoSeccao3Csharp
         static void Main(string[] args)
         {
 
-            Funcionario funcionario;
-            double aumento;
+            Aluno aluno;            
 
-            funcionario = new Funcionario();
+            aluno = new Aluno();
 
-            Console.Write("Nome: ");
-            funcionario.nome = Console.ReadLine();
-            Console.Write("Salario bruto: ");
-            funcionario.salarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Desconto: ");
-            funcionario.desconto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            aluno.nome = Console.ReadLine();
+            aluno.nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            aluno.nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            aluno.nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine(funcionario);
-
-            Console.WriteLine();
-            Console.Write("Deseja aumentar o salário em qual porcentagem? ");
-            aumento = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            funcionario.aumentarSalario(aumento);
-            Console.WriteLine(funcionario);
+            Console.WriteLine(aluno);
 
             //Console.WriteLine();
             //Console.WriteLine("Dados do produto: " + P);
