@@ -3,40 +3,47 @@ using System.Globalization;
 
 namespace cursoSeccao3Csharp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
 
-            Aluno aluno;            
+            int qte;
+            Produto P;
 
-            aluno = new Aluno();
+            CultureInfo culture = new CultureInfo("us");
 
-            aluno.nome = Console.ReadLine();
-            aluno.nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            aluno.nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            aluno.nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Digite os dados do produto: ");
 
-            Console.WriteLine(aluno);
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Dados do produto: " + P);
+            Console.Write("Preço: ");            
+            double preco = Convert.ToDouble(Console.ReadLine(), culture);
 
-            //Console.WriteLine();
-            //Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //P.realizarEntrada(qte);
+            Console.Write("Quantidade em estoque: ");
+            int quantidade = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine();
-            //Console.WriteLine("Dados atualizados: " + P);
+            P = new Produto(nome, preco, quantidade);
 
-            //Console.WriteLine();
-            //Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //P.realizarSaida(qte);
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto: " + P);
 
-            //Console.WriteLine();
-            //Console.WriteLine("Dados atualizados: " + P);
+            Console.WriteLine();
+            Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            P.realizarEntrada(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + P);
+
+            Console.WriteLine();
+            Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            P.realizarSaida(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + P);
 
             Console.ReadLine();
         }
