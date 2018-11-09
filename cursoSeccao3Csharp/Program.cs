@@ -7,9 +7,8 @@ namespace cursoSeccao3Csharp
     {
         static void Main(string[] args)
         {
+            Produto P1, P2;
 
-            int qte;
-            Produto P;
 
             CultureInfo culture = new CultureInfo("us");
 
@@ -18,7 +17,7 @@ namespace cursoSeccao3Csharp
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
 
-            Console.Write("Preço: ");            
+            Console.Write("Preço: ");
             double preco = Convert.ToDouble(Console.ReadLine(), culture);
 
             Console.Write("Quantidade em estoque: ");
@@ -29,21 +28,24 @@ namespace cursoSeccao3Csharp
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + P);
 
-            Console.WriteLine();
-            Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            P.realizarEntrada(qte);
 
-            Console.WriteLine();
-            Console.WriteLine("Dados atualizados: " + P);
+            Console.WriteLine(P.getNome());
 
-            Console.WriteLine();
-            Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            P.realizarSaida(qte);
+            //Console.WriteLine();
+            //Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
+            //qte = int.Parse(Console.ReadLine());
+            //P.realizarEntrada(qte);
 
-            Console.WriteLine();
-            Console.WriteLine("Dados atualizados: " + P);
+            //Console.WriteLine();
+            //Console.WriteLine("Dados atualizados: " + P);
+
+            //Console.WriteLine();
+            //Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
+            //qte = int.Parse(Console.ReadLine());
+            //P.realizarSaida(qte);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Dados atualizados: " + P);
 
             Console.ReadLine();
         }
