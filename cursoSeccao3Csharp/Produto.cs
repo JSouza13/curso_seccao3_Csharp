@@ -14,7 +14,7 @@ namespace cursoSeccao3Csharp
             this.quantidadeEmEstoque = quantidadeEmEstoque;
         }
 
-        //sobrecarga de função
+        //sobrecarga de função  
         public Produto(string nome, double preco)
         {
             this.nome = nome;
