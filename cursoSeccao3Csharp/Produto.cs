@@ -3,10 +3,24 @@ namespace cursoSeccao3Csharp
 {
     class Produto
     {
-        public string nome;
-        public double preco;
-        public int quantidadeEmEstoque;
+        // Encapsulamento
+        private string nome;
 
+        // Forma alternativa de encapsulamento
+        public double preco {get; private set;}
+        private int quantidadeEmEstoque;
+
+        //Função ler um atributo para fora da classe
+        public string getNome()
+        {
+            return this.nome;
+        }
+
+        // Permite alterar o atributo fora da minha classe
+        public void setNome(string nome)
+        {
+            this.nome = nome;
+        }
         public Produto(string nome, double preco, int quantidadeEmEstoque)
         {
             this.nome = nome;
@@ -14,7 +28,7 @@ namespace cursoSeccao3Csharp
             this.quantidadeEmEstoque = quantidadeEmEstoque;
         }
 
-        //sobrecarga de função  
+        // Sobrecarga de função  
         public Produto(string nome, double preco)
         {
             this.nome = nome;
