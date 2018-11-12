@@ -7,47 +7,30 @@ namespace cursoSeccao3Csharp
     {
         static void Main(string[] args)
         {
+            Produto[] vet;
+            double soma, media;
+            int N;
 
-            int qte;
-            Produto P;
+            N = int.Parse(Console.ReadLine());
+            vet = new Produto[N];
 
-            CultureInfo culture = new CultureInfo("us");
+            for (int i = 0; i < N; i++)
+            {
+                string nome = Console.ReadLine();
+                double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                vet[i] = new Produto(nome, valor);
+            }
 
-            Console.WriteLine("Digite os dados do produto: ");
+            soma = 0.0;
 
-            Console.Write("Nome: ");
-            string nome = Console.ReadLine();
+            for (int i = 0; i < N; i++)
+            {
+                soma += vet[i].preco;
+            }
 
-            Console.Write("Preço: ");            
-            double preco = Convert.ToDouble(Console.ReadLine(), culture);
+            media = soma / N;
 
-            Console.Write("Quantidade em estoque: ");
-            int quantidade = int.Parse(Console.ReadLine());
-
-            P = new Produto(nome, preco, quantidade);
-
-            Console.WriteLine();
-            Console.WriteLine("Dados do produto: " + P);
-
-
-            Console.WriteLine(P.getNome());
-
-            //Console.WriteLine();
-            //Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //P.realizarEntrada(qte);
-
-            //Console.WriteLine();
-            //Console.WriteLine("Dados atualizados: " + P);
-
-            //Console.WriteLine();
-            //Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //P.realizarSaida(qte);
-
-            //Console.WriteLine();
-            //Console.WriteLine("Dados atualizados: " + P);
-
+            Console.WriteLine("PREÇO MÉDIO = R$ " + media.ToString("F2", CultureInfo.InvariantCulture));
             Console.ReadLine();
         }
     }

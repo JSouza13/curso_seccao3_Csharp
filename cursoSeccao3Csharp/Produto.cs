@@ -28,12 +28,12 @@ namespace cursoSeccao3Csharp
             this.quantidadeEmEstoque = quantidadeEmEstoque;
         }
 
-        // Sobrecarga de função  
+        // Sobrecarga do construtor 
         public Produto(string nome, double preco)
         {
             this.nome = nome;
             this.preco = preco;
-            this.quantidadeEmEstoque = 0;
+            quantidadeEmEstoque = 0;
         }
 
         public double valorTotalEmEstoque()
