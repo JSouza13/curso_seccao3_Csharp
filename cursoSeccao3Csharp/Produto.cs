@@ -4,23 +4,23 @@ namespace cursoSeccao3Csharp
     class Produto
     {
         // Encapsulamento
-        private string nome;
-
+        public string nome { get; private set; }
         // Forma alternativa de encapsulamento
-        public double preco {get; private set;}
-        private int quantidadeEmEstoque;
+        public double preco { get; private set; }
+        public int quantidadeEmEstoque { get; private set; }
 
-        //Função ler um atributo para fora da classe
-        public string getNome()
-        {
-            return this.nome;
-        }
+        ////Função ler um atributo para fora da classe
+        //public string getNome()
+        //{
+        //    return this.nome;
+        //}
 
-        // Permite alterar o atributo fora da minha classe
-        public void setNome(string nome)
-        {
-            this.nome = nome;
-        }
+        //// Permite alterar o atributo fora da minha classe
+        //public void setNome(string nome)
+        //{
+        //    this.nome = nome;
+        //}
+
         public Produto(string nome, double preco, int quantidadeEmEstoque)
         {
             this.nome = nome;
