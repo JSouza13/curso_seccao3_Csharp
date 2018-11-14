@@ -8,6 +8,7 @@ namespace cursoSeccao3Csharp
         // Forma alternativa de encapsulamento
         public double preco { get; private set; }
         public int quantidadeEmEstoque { get; private set; }
+        public Fornecedor fornecedor { get; private set; }
 
         ////Função ler um atributo para fora da classe
         //public string getNome()
@@ -21,19 +22,21 @@ namespace cursoSeccao3Csharp
         //    this.nome = nome;
         //}
 
-        public Produto(string nome, double preco, int quantidadeEmEstoque)
+        public Produto(string nome, double preco, int quantidadeEmEstoque, Fornecedor fornecedor)
         {
             this.nome = nome;
             this.preco = preco;
             this.quantidadeEmEstoque = quantidadeEmEstoque;
+            this.fornecedor = fornecedor;
         }
 
         // Sobrecarga do construtor 
-        public Produto(string nome, double preco)
+        public Produto(string nome, double preco, Fornecedor fornecedor)
         {
             this.nome = nome;
             this.preco = preco;
             quantidadeEmEstoque = 0;
+            this.fornecedor = fornecedor;
         }
 
         public double valorTotalEmEstoque()
@@ -60,7 +63,9 @@ namespace cursoSeccao3Csharp
                 + ", "
                 + quantidadeEmEstoque
                 + " unidades, Total: R$ "
-                + valorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+                + valorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture)
+                + ", Fornecedor: "
+                + fornecedor;
         }
     }
 }

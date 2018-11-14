@@ -8,20 +8,14 @@ namespace cursoSeccao3Csharp
     {
         static void Main(string[] args)
         {
-            List<Produto> lista = new List<Produto>();
+            Fornecedor fornecedor;
+            Produto produto;
 
-            lista.Add(new Produto("Tv", 900.00));
-            lista.Add(new Produto("Aspirador", 400.00));
-            lista.Add(new Produto("Telefone", 700.00));
-            lista.Add(new Produto("Geladeira", 2000.00));
+            fornecedor = new Fornecedor("Lojas Ltda", "Lojas@gmail.com", "3273-3837");
+            produto = new Produto("Tv", 1000.00, fornecedor);
 
-            int pos = lista.FindIndex(x => x.nome == "Aspirador");
-            Console.WriteLine("Posição encontrada = " + pos);
+            Console.WriteLine(produto);
 
-            for(int i = 0; i<lista.Count;i++)
-            {
-                Console.WriteLine(lista[i]);
-            }
             Console.ReadLine();
         }
     }
