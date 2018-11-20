@@ -9,7 +9,8 @@ namespace cursoSeccao3Csharp
         public double ladoB { get; set; }
         public double ladoC { get; set; }
 
-        public Triangulo(double ladoA, double ladoB, double ladoC, string cor) : base(cor)
+        // ": base ()" chama automaticamente o contrutor da classe pai
+        public Triangulo(double ladoA, double ladoB, double ladoC, string cor) //: base(cor)   
         {
             this.ladoA = ladoA;
             this.ladoB = ladoB;
@@ -17,13 +18,13 @@ namespace cursoSeccao3Csharp
         }
 
         // Sobre posição do metodo area da Classe Figura
-        public override double area()
+        public double area()
         {
             double p = (ladoA + ladoB + ladoC) / 2.0;
             return Math.Sqrt(p * (p - ladoA) * (p - ladoB) * (p - ladoC));
         }
 
-        public override double perimetro()
+        public double perimetro()
         {
             return ladoA + ladoB + ladoC;
         }
