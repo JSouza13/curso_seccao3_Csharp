@@ -10,7 +10,7 @@ namespace cursoSeccao3Csharp
         public double ladoC { get; set; }
 
         // ": base ()" chama automaticamente o contrutor da classe pai
-        public Triangulo(double ladoA, double ladoB, double ladoC, string cor) //: base(cor)   
+        public Triangulo(double ladoA, double ladoB, double ladoC) //: base(cor)   
         {
             this.ladoA = ladoA;
             this.ladoB = ladoB;

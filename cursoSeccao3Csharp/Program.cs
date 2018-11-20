@@ -19,22 +19,14 @@ namespace cursoSeccao3Csharp
                 char escolhaFigura = char.Parse(Console.ReadLine());
                 if (escolhaFigura == 'r' || escolhaFigura == 'R')
                 {
-                    Console.Write("Largura: ");
-                    double largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Console.Write("Altura: ");
-                    double altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Figura figura = new Retangulo(largura, altura, "Preto");
+                    // Métodos estáticos
+                    Figura figura = Tela.lerRetangulo();
                     lista.Add(figura);
                 }
                 else
                 {
-                    Console.Write("Lado A: ");
-                    double ladoA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Console.Write("Lado B: ");
-                    double ladoB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Console.Write("Lado C: ");
-                    double ladoC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Figura figura = new Triangulo(ladoA, ladoB, ladoC, "Azul");
+                    // Métodos estáticos
+                    Figura figura = Tela.lerTriangulo();
                     lista.Add(figura);
                 }
             }
@@ -42,7 +34,7 @@ namespace cursoSeccao3Csharp
             Console.WriteLine("Áreas das figuras: ");
             for (int i = 1; i <= numeroFiguras; i++)
             {
-                Console.WriteLine("Figura " + i + "(" + lista[i - 1].cor + "): " + lista[i - 1].area());
+                Console.WriteLine("Figura " + i + ": " + lista[i - 1].area().ToString("F1", CultureInfo.InvariantCulture));
             }
             Console.ReadLine();
         }

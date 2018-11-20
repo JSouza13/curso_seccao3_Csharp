@@ -9,7 +9,7 @@ namespace cursoSeccao3Csharp
         public double altura { get; set; }
 
         // ": base ()" chama automaticamente o contrutor da classe pai
-        public Retangulo(double largura, double altura, string cor) //: base(cor)
+        public Retangulo(double largura, double altura) //: base(cor)
         {
             this.largura = largura;
             this.altura = altura;
