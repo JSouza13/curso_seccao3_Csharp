@@ -8,34 +8,35 @@ namespace cursoSeccao3Csharp
     {
         private static void Main(string[] args)
         {
-            List<Figura> lista = new List<Figura>();
+            Console.Write("Número da conta: ");
+            int numero = int.Parse(Console.ReadLine());
+            Console.Write("Nome do titular: ");
+            string titular = Console.ReadLine();
+            Console.Write("Limite de saque: ");
+            double limite = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.Write("Quantas figuras você vai digitar? ");
-            int numeroFiguras = int.Parse(Console.ReadLine());
+            Conta novaConta = new Conta(numero, titular, limite);
 
-            for (int i = 1; i <= numeroFiguras; i++)
+            Console.Write("\nInforme um valor para depósito: ");
+            double valorDeposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            novaConta.depositar(valorDeposito);
+            Console.WriteLine("Novo saldo = R$ " + novaConta.saldo.ToString("F2", CultureInfo.InvariantCulture));
+
+            Console.Write("\nInforme um valor para saque: ");
+            double valorSaque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            // Tenta executar o bloco
+            try
             {
-                Console.Write("Figura " + i + " - triângulo ou retângulo (t/r)? ");
-                char escolhaFigura = char.Parse(Console.ReadLine());
-                if (escolhaFigura == 'r' || escolhaFigura == 'R')
-                {
-                    // Métodos estáticos
-                    Figura figura = Tela.lerRetangulo();
-                    lista.Add(figura);
-                }
-                else
-                {
-                    // Métodos estáticos
-                    Figura figura = Tela.lerTriangulo();
-                    lista.Add(figura);
-                }
+                novaConta.sacar(valorSaque);
+                Console.WriteLine("Novo saldo = R$ " + novaConta.saldo.ToString("F2", CultureInfo.InvariantCulture));
             }
-            Console.WriteLine();
-            Console.WriteLine("Áreas das figuras: ");
-            for (int i = 1; i <= numeroFiguras; i++)
+            // Se acontecer algum erro, ele captura e retorna a mensagem
+            catch (OperacaoException e)
             {
-                Console.WriteLine("Figura " + i + ": " + lista[i - 1].area().ToString("F1", CultureInfo.InvariantCulture));
+                Console.WriteLine(e.Message);
             }
+
             Console.ReadLine();
         }
     }
