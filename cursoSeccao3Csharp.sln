@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cursoSeccao3Csharp", "cursoSeccao3Csharp\cursoSeccao3Csharp.csproj", "{73D33400-46B7-4772-A415-5D75B4FAA929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cursoCsharpSeccao10", "cursoCsharpSeccao10\cursoCsharpSeccao10.csproj", "{32BB1300-FF79-400B-B535-F985AEC66BC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{73D33400-46B7-4772-A415-5D75B4FAA929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73D33400-46B7-4772-A415-5D75B4FAA929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73D33400-46B7-4772-A415-5D75B4FAA929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BB1300-FF79-400B-B535-F985AEC66BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BB1300-FF79-400B-B535-F985AEC66BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BB1300-FF79-400B-B535-F985AEC66BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BB1300-FF79-400B-B535-F985AEC66BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
