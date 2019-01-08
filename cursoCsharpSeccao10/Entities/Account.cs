@@ -17,5 +17,17 @@ namespace cursoCsharpSeccao10
             Holder = holder;
             Balance = balance;
         }
+
+        // A palavra "virtual" é utilizada para identificar
+        // que aquela função pode ser sobreescrita.
+        public virtual void Withdraw(double amount)
+        {
+            Balance -= amount + 5.0; 
+        }
+
+        public void Deposit(double amount)
+        {
+            Balance += amount;
+        }
     }
 }
