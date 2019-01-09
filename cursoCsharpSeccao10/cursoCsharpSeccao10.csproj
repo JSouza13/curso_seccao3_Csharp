@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73D33400-46B7-4772-A415-5D75B4FAA929}</ProjectGuid>
+    <ProjectGuid>{32BB1300-FF79-400B-B535-F985AEC66BC8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cursoSeccao3Csharp</RootNamespace>
-    <AssemblyName>cursoSeccao3Csharp</AssemblyName>
+    <RootNamespace>cursoCsharpSeccao10</RootNamespace>
+    <AssemblyName>cursoCsharpSeccao10</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,22 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aluno.cs" />
-    <Compile Include="Conta.cs" />
-    <Compile Include="Figura.cs" />
-    <Compile Include="Fornecedor.cs" />
-    <Compile Include="Funcionario.cs" />
-    <Compile Include="OperacaoException.cs" />
-    <Compile Include="Produto.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\BusinessAccount.cs" />
+    <Compile Include="Entities\SavingsAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Retangulo.cs" />
-    <Compile Include="Tela.cs" />
-    <Compile Include="Triangulo.cs" />
-    <Compile Include="Util.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,11 +2,20 @@
 
 namespace cursoSeccao3Csharp
 {
-    class Retangulo
+    // Retangulo é uma sub classe de Figura
+    class Retangulo : Figura
     {
-        public double largura;
-        public double altura;
+        public double largura { get; set; }
+        public double altura { get; set; }
 
+        // ": base ()" chama automaticamente o contrutor da classe pai
+        public Retangulo(double largura, double altura) //: base(cor)
+        {
+            this.largura = largura;
+            this.altura = altura;
+        }
+
+        // Sobre posição do metodo area da Classe Figura
         public double area()
         {
             return largura * altura;
@@ -14,23 +23,7 @@ namespace cursoSeccao3Csharp
 
         public double perimetro()
         {
-            return (largura + altura) * 2;
-        }
-
-        public double diagonal()
-        {
-            return System.Math.Sqrt((largura * largura) + (altura * altura));
-        }
-
-        //Sobrecarregar o método ToString para retornar uma String do meu Objeto
-        public override string ToString()
-        {
-            return "AREA: "
-                + area().ToString("F2", CultureInfo.InvariantCulture)
-                + "\nPERIMETRO: "
-                + perimetro().ToString("F2", CultureInfo.InvariantCulture)
-                + "\nDIAGONAL: "
-                + diagonal().ToString("F2", CultureInfo.InvariantCulture);
+            return 2*(largura*altura);
         }
     }
 }

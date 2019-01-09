@@ -3,37 +3,40 @@ namespace cursoSeccao3Csharp
 {
     class Produto
     {
-        // Encapsulamento, essa forma é muito utilizada em Java
-        private string nome;
+        // Encapsulamento
+        public string nome { get; private set; }
+        // Forma alternativa de encapsulamento
+        public double preco { get; private set; }
+        public int quantidadeEmEstoque { get; private set; }
+        public Fornecedor fornecedor { get; private set; }
 
-        // Forma alternativa de encapsulamento, forma utilizada para tratar encapsulamento no c#
-        public double preco {get; private set;}
-        private int quantidadeEmEstoque;
+        ////Função ler um atributo para fora da classe
+        //public string getNome()
+        //{
+        //    return this.nome;
+        //}
 
-        //Função ler um atributo para fora da classe
-        public string getNome()
-        {
-            return this.nome;
-        }
+        //// Permite alterar o atributo fora da minha classe
+        //public void setNome(string nome)
+        //{
+        //    this.nome = nome;
+        //}
 
-        // Permite alterar o atributo fora da minha classe
-        public void setNome(string nome)
-        {
-            this.nome = nome;
-        }
-        public Produto(string nome, double preco, int quantidadeEmEstoque)
+        public Produto(string nome, double preco, int quantidadeEmEstoque, Fornecedor fornecedor)
         {
             this.nome = nome;
             this.preco = preco;
             this.quantidadeEmEstoque = quantidadeEmEstoque;
+            this.fornecedor = fornecedor;
         }
 
-        // Sobrecarga de função  
-        public Produto(string nome, double preco)
+        // Sobrecarga do construtor 
+        public Produto(string nome, double preco, Fornecedor fornecedor)
         {
             this.nome = nome;
             this.preco = preco;
-            this.quantidadeEmEstoque = 0;
+            quantidadeEmEstoque = 0;
+            this.fornecedor = fornecedor;
         }
 
         public double valorTotalEmEstoque()
@@ -60,7 +63,9 @@ namespace cursoSeccao3Csharp
                 + ", "
                 + quantidadeEmEstoque
                 + " unidades, Total: R$ "
-                + valorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+                + valorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture)
+                + ", Fornecedor: "
+                + fornecedor;
         }
     }
 }

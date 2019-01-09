@@ -1,51 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace cursoSeccao3Csharp
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Produto P1, P2;
+            Console.Write("Número da conta: ");
+            int numero = int.Parse(Console.ReadLine());
+            Console.Write("Nome do titular: ");
+            string titular = Console.ReadLine();
+            Console.Write("Limite de saque: ");
+            double limite = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            Conta novaConta = new Conta(numero, titular, limite);
 
-            CultureInfo culture = new CultureInfo("us");
+            Console.Write("\nInforme um valor para depósito: ");
+            double valorDeposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            novaConta.depositar(valorDeposito);
+            Console.WriteLine("Novo saldo = R$ " + novaConta.saldo.ToString("F2", CultureInfo.InvariantCulture));
 
-            Console.WriteLine("Digite os dados do produto: ");
+            Console.Write("\nInforme um valor para saque: ");
+            double valorSaque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.Write("Nome: ");
-            string nome = Console.ReadLine();
-
-            Console.Write("Preço: ");
-            double preco = Convert.ToDouble(Console.ReadLine(), culture);
-
-            Console.Write("Quantidade em estoque: ");
-            int quantidade = int.Parse(Console.ReadLine());
-
-            P = new Produto(nome, preco, quantidade);
-
-            Console.WriteLine();
-            Console.WriteLine("Dados do produto: " + P);
-
-
-            Console.WriteLine(P.getNome());
-
-            //Console.WriteLine();
-            //Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //P.realizarEntrada(qte);
-
-            //Console.WriteLine();
-            //Console.WriteLine("Dados atualizados: " + P);
-
-            //Console.WriteLine();
-            //Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //P.realizarSaida(qte);
-
-            //Console.WriteLine();
-            //Console.WriteLine("Dados atualizados: " + P);
+            // Tenta executar o bloco
+            try
+            {
+                novaConta.sacar(valorSaque);
+                Console.WriteLine("Novo saldo = R$ " + novaConta.saldo.ToString("F2", CultureInfo.InvariantCulture));
+            }
+            // Se acontecer algum erro, ele captura e retorna a mensagem
+            catch (OperacaoException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.ReadLine();
         }
