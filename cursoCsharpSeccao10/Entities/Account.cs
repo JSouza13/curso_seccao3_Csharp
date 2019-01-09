@@ -24,7 +24,7 @@ namespace cursoCsharpSeccao10
         {
             Balance -= amount + 5.0; 
         }
-
+       
         public void Deposit(double amount)
         {
             Balance += amount;

@@ -1,7 +1,8 @@
 ﻿
 namespace cursoCsharpSeccao10.Entities
 {
-    class SavingsAccount : Account
+    // A palavra sealed não permite que a classe seja herdada
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -20,7 +21,8 @@ namespace cursoCsharpSeccao10.Entities
             Balance += Balance * InterestRate;
         }
 
-        public override void Withdraw(double amount)
+        // O método não pode ser subescrito novamente
+        public sealed override void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 2.0;
