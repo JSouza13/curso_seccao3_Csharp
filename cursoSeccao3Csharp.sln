@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cursoCsharpSeccao10", "curs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCsharpSeccao11", "CursoCsharpSeccao11\CursoCsharpSeccao11.csproj", "{F04168E3-9FB8-4C4E-B2F5-4F7FAFEDE39D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seccao13", "Seccao13\Seccao13.csproj", "{6C5972B0-9D27-4F1B-8132-07CCC3483838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{5491AB6F-0121-4659-AABC-45C5F1572ADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{F04168E3-9FB8-4C4E-B2F5-4F7FAFEDE39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F04168E3-9FB8-4C4E-B2F5-4F7FAFEDE39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F04168E3-9FB8-4C4E-B2F5-4F7FAFEDE39D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5972B0-9D27-4F1B-8132-07CCC3483838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5972B0-9D27-4F1B-8132-07CCC3483838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5972B0-9D27-4F1B-8132-07CCC3483838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5972B0-9D27-4F1B-8132-07CCC3483838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5491AB6F-0121-4659-AABC-45C5F1572ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5491AB6F-0121-4659-AABC-45C5F1572ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5491AB6F-0121-4659-AABC-45C5F1572ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5491AB6F-0121-4659-AABC-45C5F1572ADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
